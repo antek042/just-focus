@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Just Focus</string>
+
+    <string name="tab_focus">Focus</string>
+    <string name="tab_apps">Apps</string>
+
+    <!-- Timer -->
+    <string name="duration_decrease">−%1$d min</string>
+    <string name="duration_increase">+%1$d min</string>
+    <string name="duration_minutes">%1$d min</string>
+    <string name="session_start">Start session</string>
+    <string name="session_stop">End session</string>
+    <string name="session_start_needs_permissions">To start, grant the required permissions above.</string>
+    <string name="session_in_progress_hint">Stay focused. Opening a blocked app brings you back here.</string>
+    <string name="allowed_apps_header">Allowed apps</string>
+
+    <!-- Apps -->
+    <string name="access_blocked">Blocked</string>
+    <string name="access_allowed">Allowed</string>
+    <string name="access_emergency">Emergency</string>
+    <string name="apps_explanation">Blocked – can\'t be opened during a session.\nAllowed – can be used, but its notifications wait until the session ends.\nEmergency – can be used and its notifications come through right away (e.g. phone, messages from family).\nPhone calls and emergency calls always work.</string>
+    <string name="apps_locked_during_session">A focus session is running – app settings can be changed once it ends.</string>
+
+    <!-- Permissions -->
+    <string name="permissions_header">Permissions</string>
+    <string name="permission_required">required</string>
+    <string name="permission_recommended">recommended</string>
+    <string name="permission_grant">Open settings</string>
+    <string name="permission_app_blocking_title">App blocking</string>
+    <string name="permission_app_blocking_description">Turn on “Just Focus” in Accessibility settings. If the option is greyed out: App info → ⋮ → “Allow restricted settings”.</string>
+    <string name="permission_notification_filtering_title">Notification filtering</string>
+    <string name="permission_notification_filtering_description">Holds back notifications from non-emergency apps until the session ends.</string>
+    <string name="permission_notifications_title">Just Focus notifications</string>
+    <string name="permission_notifications_description">To show the countdown and tell you when the session is over.</string>
+    <string name="permission_exact_alarm_title">Alarms &amp; reminders</string>
+    <string name="permission_exact_alarm_description">So the end-of-session notification arrives on time, even with the screen off.</string>
+
+    <!-- System services -->
+    <string name="app_blocker_label">Just Focus – app blocking</string>
+    <string name="app_blocker_description">During a focus session, brings you back to Just Focus when you open a blocked app. It does not read screen content.</string>
+    <string name="notification_filter_label">Just Focus – notification filter</string>
+
+    <!-- Notifications -->
+    <string name="channel_session_ongoing">Session in progress</string>
+    <string name="channel_session_completed">Session finished</string>
+    <string name="notification_ongoing_title">Focus session in progress</string>
+    <string name="notification_ongoing_text">Only your chosen apps are available</string>
+    <string name="notification_completed_title">Focus session complete</string>
+    <string name="notification_completed_text">Great work! Time for a break.</string>
+</resources>
