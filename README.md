@@ -9,7 +9,7 @@ Every push to `main` publishes a new release. Open the **[latest release](../../
 ## Features
 
 - **Session timer.** Pick a length from 5 to 240 minutes (±5 min buttons or presets), then *Start session* / *End session*.
-- **App blocking.** During a session only your chosen apps work. Opening any other app brings you back to Just Focus. You can launch allowed apps straight from the session screen.
+- **App blocking.** During a session only your chosen apps work. Opening any other app brings you back to Just Focus. Allowed apps can also be launched straight from the session screen.
 - **Notification filter.** During a session only *emergency* apps can notify you. Notifications from other apps are snoozed until the session ends, so nothing is lost.
 - **"Focus session complete" notification** when the time is up.
 
@@ -21,7 +21,7 @@ Each app has one of three modes (the *Apps* tab):
 | Allowed   | yes           | after the session |
 | Emergency | yes           | right away        |
 
-Phone calls (including emergency numbers), the keyboard and the system bars always work.
+The home screen, recent apps, phone calls (including emergency numbers), the keyboard and the system bars always work. You can leave Just Focus and use your phone freely – only opening a blocked app brings you back.
 
 ## Requirements
 

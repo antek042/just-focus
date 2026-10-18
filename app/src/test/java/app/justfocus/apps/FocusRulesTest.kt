@@ -12,7 +12,10 @@ class FocusRulesTest {
             "com.notes" to AppAccess.ALLOWED,
             "com.family.chat" to AppAccess.EMERGENCY,
         ),
-        alwaysAllowedPackages = setOf("com.phone"),
+        systemAccessByPackage = mapOf(
+            "com.phone" to AppAccess.EMERGENCY,
+            "com.launcher" to AppAccess.ALLOWED,
+        ),
     )
 
     @Test
@@ -35,10 +38,16 @@ class FocusRulesTest {
     }
 
     @Test
-    fun `always allowed system apps win over the user's choice`() {
+    fun `the home screen can be used but stays silent`() {
+        assertTrue(rules.canOpen("com.launcher"))
+        assertFalse(rules.canNotify("com.launcher"))
+    }
+
+    @Test
+    fun `system access wins over the user's choice`() {
         val rulesWithBlockedPhone = FocusRules(
             accessByPackage = mapOf("com.phone" to AppAccess.BLOCKED),
-            alwaysAllowedPackages = setOf("com.phone"),
+            systemAccessByPackage = mapOf("com.phone" to AppAccess.EMERGENCY),
         )
 
         assertTrue(rulesWithBlockedPhone.canOpen("com.phone"))

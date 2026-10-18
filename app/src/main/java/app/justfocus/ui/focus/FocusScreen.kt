@@ -146,7 +146,7 @@ private fun SessionInProgress(state: FocusUiState.Focusing, onStop: () -> Unit) 
     }
 }
 
-/** Opens allowed apps directly, since the home screen itself is blocked during a session. */
+/** Shortcuts to the allowed apps, so they are one tap away during a session. */
 @Composable
 private fun AllowedAppsLauncher(apps: List<InstalledApp>) {
     val context = LocalContext.current

@@ -4,7 +4,7 @@ import android.content.Context
 import app.justfocus.apps.AppAccessRepository
 import app.justfocus.apps.InstalledAppsRepository
 import app.justfocus.apps.SharedPreferencesAppAccessStore
-import app.justfocus.apps.resolveAlwaysAllowedPackages
+import app.justfocus.apps.resolveSystemAppAccess
 import app.justfocus.blocking.FocusGuard
 import app.justfocus.notifications.SessionNotifications
 import app.justfocus.permissions.PermissionChecker
@@ -36,7 +36,7 @@ class AppContainer(context: Context) {
     val installedAppsRepository = InstalledAppsRepository(context.packageManager, context.packageName)
 
     val focusGuard = FocusGuard(sessionManager, appAccessRepository, clock) {
-        resolveAlwaysAllowedPackages(context)
+        resolveSystemAppAccess(context)
     }
 
     val permissionChecker = PermissionChecker(context, sessionEndAlarm)

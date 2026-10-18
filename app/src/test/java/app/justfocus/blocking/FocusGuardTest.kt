@@ -22,7 +22,9 @@ class FocusGuardTest {
             saved = mapOf("com.notes" to AppAccess.ALLOWED, "com.family.chat" to AppAccess.EMERGENCY),
         ),
     )
-    private val guard = FocusGuard(sessionManager, appAccessRepository, clock) { setOf("com.phone") }
+    private val guard = FocusGuard(sessionManager, appAccessRepository, clock) {
+        mapOf("com.phone" to AppAccess.EMERGENCY, "com.launcher" to AppAccess.ALLOWED)
+    }
 
     @Test
     fun `nothing is blocked or held back without a session`() {
@@ -38,6 +40,14 @@ class FocusGuardTest {
         assertFalse(guard.shouldBlockApp("com.notes"))
         assertFalse(guard.shouldBlockApp("com.family.chat"))
         assertFalse(guard.shouldBlockApp("com.phone"))
+    }
+
+    @Test
+    fun `during a session you can go back to the home screen`() {
+        sessionManager.start(durationMinutes = 25)
+
+        assertFalse(guard.shouldBlockApp("com.launcher"))
+        assertEquals(25 * 60_000L, guard.notificationSnoozeMillis("com.launcher"))
     }
 
     @Test

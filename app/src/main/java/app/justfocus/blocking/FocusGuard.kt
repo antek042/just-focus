@@ -1,5 +1,6 @@
 package app.justfocus.blocking
 
+import app.justfocus.apps.AppAccess
 import app.justfocus.apps.AppAccessRepository
 import app.justfocus.apps.FocusRules
 import app.justfocus.session.Clock
@@ -10,7 +11,7 @@ class FocusGuard(
     private val sessionManager: FocusSessionManager,
     private val appAccessRepository: AppAccessRepository,
     private val clock: Clock,
-    private val alwaysAllowedPackages: () -> Set<String>,
+    private val systemAccessByPackage: () -> Map<String, AppAccess>,
 ) {
     fun shouldBlockApp(packageName: String): Boolean =
         sessionManager.isFocusActive() && !currentRules().canOpen(packageName)
@@ -23,5 +24,5 @@ class FocusGuard(
     }
 
     private fun currentRules() =
-        FocusRules(appAccessRepository.accessByPackage.value, alwaysAllowedPackages())
+        FocusRules(appAccessRepository.accessByPackage.value, systemAccessByPackage())
 }

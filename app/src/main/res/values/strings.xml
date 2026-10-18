@@ -19,7 +19,7 @@
     <string name="access_blocked">Blocked</string>
     <string name="access_allowed">Allowed</string>
     <string name="access_emergency">Emergency</string>
-    <string name="apps_explanation">Blocked – can\'t be opened during a session.\nAllowed – can be used, but its notifications wait until the session ends.\nEmergency – can be used and its notifications come through right away (e.g. phone, messages from family).\nPhone calls and emergency calls always work.</string>
+    <string name="apps_explanation">Blocked – can\'t be opened during a session.\nAllowed – can be used, but its notifications wait until the session ends.\nEmergency – can be used and its notifications come through right away (e.g. phone, messages from family).\nThe home screen, phone calls and emergency calls always work.</string>
     <string name="apps_locked_during_session">A focus session is running – app settings can be changed once it ends.</string>
 
     <!-- Permissions -->
