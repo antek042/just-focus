@@ -2,6 +2,12 @@
 
 A minimalist Android app that helps you focus on studying. Dark theme with purple accents.
 
+<p align="center">
+  <img src="showcase/focus-timer.png" alt="Focus tab: 25-minute timer with duration presets and a Start session button" width="280">
+  &nbsp;&nbsp;
+  <img src="showcase/app-modes.png" alt="Apps tab: each app set to Blocked, Allowed or Emergency" width="280">
+</p>
+
 ## Download
 
 Every push to `main` publishes a new release. Open the **[latest release](../../releases/latest)**, download `just-focus-<version>.apk` on your phone and open it to install. New releases install over the old one as updates.
